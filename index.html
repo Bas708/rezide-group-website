@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REZIDE Group | Chicagoland Real Estate — Basil Kawash</title>
+<meta name="description" content="The REZIDE Group — Chicagoland real estate with family-first negotiation. Basil Kawash, RE/MAX Legends. Buy, sell, and win in Chicago and the southwest suburbs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0b0b0d;--ink:#101013;--panel:#141418;--border:#26262c;--gold:#c5a253;--gold-l:#e0c98c;--text:#f2f0ea;--muted:#9b9891;--cream:#f6f3ec}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:transparent;color:var(--text);line-height:1.6;overflow-x:hidden}
+#bgflow{position:fixed;inset:0;z-index:-2;background:#0b0b0d;transition:background 1.4s ease}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.kicker{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.h-xl{font-size:clamp(34px,5vw,58px);font-weight:300;letter-spacing:6px;text-transform:uppercase;line-height:1.15}
+.h-lg{font-size:clamp(26px,3.4vw,40px);font-weight:300;letter-spacing:5px;text-transform:uppercase}
+.gold-rule{width:70px;height:2px;background:var(--gold);margin:22px 0}
+.btn{display:inline-block;padding:15px 36px;font-size:11.5px;letter-spacing:3px;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);color:var(--gold);transition:.3s;cursor:pointer;background:none}
+.btn:hover{background:var(--gold);color:#111}
+.btn.solid{background:var(--gold);color:#111}
+.btn.solid:hover{background:var(--gold-l)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 34px;transition:.35s;background:linear-gradient(180deg,rgba(11,11,13,.85),transparent)}
+nav.solid{background:rgba(13,13,15,.97);border-bottom:1px solid var(--border);padding:13px 34px;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+nav .logo{height:38px}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav ul a{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text);opacity:.85;transition:.25s}
+nav ul a:hover{color:var(--gold);opacity:1}
+nav .cta{border:1px solid var(--gold);color:var(--gold);padding:9px 20px}
+nav .cta:hover{background:var(--gold);color:#111}
+.burger{display:none;background:none;border:none;color:var(--gold);font-size:26px;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;background:radial-gradient(ellipse 90% 65% at 50% 108%,rgba(197,162,83,.16),transparent 60%),linear-gradient(180deg,#0b0b0d 0%,#101014 55%,#0b0b0d 100%)}
+.hero:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 190px,rgba(197,162,83,.05) 190px 193px);pointer-events:none}
+.hero .slashes{position:absolute;top:14%;right:9%;width:120px;height:220px;background:repeating-linear-gradient(115deg,transparent 0 26px,rgba(197,162,83,.5) 26px 30px);opacity:.5}
+.hero .slashes.l{left:7%;right:auto;top:auto;bottom:12%;opacity:.3;transform:scale(.7)}
+.hero img.hero-logo{width:min(360px,64vw);margin-bottom:34px}
+.hero h1{font-size:clamp(30px,5.4vw,62px);font-weight:300;letter-spacing:clamp(6px,1.2vw,16px);text-transform:uppercase}
+.hero h1 span{color:var(--gold)}
+.hero .sub{margin-top:20px;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+.hero .btns{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.hero .scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;animation:bob 2.4s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+/* marquee band */
+.band{background:var(--gold);color:#111;padding:14px 0;overflow:hidden;white-space:nowrap}
+.band .inner{display:inline-block;animation:slide 28s linear infinite;font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:600}
+.band .inner span{margin:0 34px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* sections */
+section{padding:100px 0}
+.rev{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.rev.in{opacity:1;transform:none}
+/* about */
+.about{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:64px;align-items:center}
+.about .photo{position:relative}
+.about .photo img{width:100%;background:#fff;border:1px solid var(--border)}
+.about .photo:after{content:'';position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
+.about p{color:#cfccc4;margin-bottom:16px;font-weight:300;font-size:16px}
+.about .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--gold-l);margin-top:10px}
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--border);border:1px solid var(--border)}
+.pillar{background:var(--ink);padding:44px 30px;text-align:center}
+.pillar b{display:block;font-size:15px;letter-spacing:3px;text-transform:uppercase;font-weight:500;color:var(--gold);margin-bottom:10px}
+.pillar span{font-size:13px;color:var(--muted);font-weight:300}
+/* listings */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;margin-top:46px}
+.listing{background:var(--panel);border:1px solid var(--border);transition:.35s;position:relative}
+.listing:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 22px 44px rgba(0,0,0,.5)}
+.listing .ph{height:230px;overflow:hidden;position:relative}
+.listing .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.listing:hover .ph img{transform:scale(1.06)}
+.listing .ph.empty{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#17171b,#101013);color:var(--muted);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.tag{position:absolute;top:14px;left:14px;background:var(--gold);color:#111;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:4px 11px}
+.tag.dark{background:#111;color:var(--gold);border:1px solid var(--gold)}
+.listing .info{padding:22px}
+.listing .price{font-size:22px;font-weight:400;letter-spacing:1px;color:var(--gold-l)}
+.listing .addr{font-size:14px;margin-top:5px}
+.listing .meta{font-size:11.5px;letter-spacing:1.5px;color:var(--muted);margin-top:9px;text-transform:uppercase}
+.center{text-align:center}
+.center .gold-rule{margin:22px auto}
+/* testimonials */
+.t-wrap{background:var(--cream);color:#1c1c1e}
+.t-wrap .kicker{color:#a3873f}
+.tcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:46px}
+.tcard{background:#fff;border-top:3px solid var(--gold);padding:34px 30px;box-shadow:0 14px 34px rgba(28,25,17,.08)}
+.tcard .q{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--gold);line-height:.6;margin-bottom:18px}
+.tcard p{font-size:14.5px;color:#3a3a3e;font-weight:300;margin-bottom:18px}
+.tcard b{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#77746c;font-weight:600}
+/* market updates */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:46px}
+.ncard{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--gold);padding:30px}
+.ncard .date{font-size:10px;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase}
+.ncard h4{font-size:17px;font-weight:400;letter-spacing:1px;margin:12px 0 10px}
+.ncard p{font-size:13.5px;color:var(--muted);font-weight:300}
+.ncard a{color:var(--gold);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;display:inline-block;margin-top:16px}
+/* cta band */
+.cta-band{background:linear-gradient(120deg,#101013 60%,#1a170f),var(--ink);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);text-align:center;padding:90px 28px}
+.cta-band h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,3.2vw,36px);font-style:italic;color:var(--text);max-width:760px;margin:0 auto 34px}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:70px}
+.contact .line{margin:22px 0;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.contact .line span{display:block;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.contact .line a,.contact .line div{font-size:18px;font-weight:300}
+.contact .line a:hover{color:var(--gold)}
+form label{display:block;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin:18px 0 7px}
+form input,form select,form textarea{width:100%;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:13px;font-size:14px;font-family:'Jost',sans-serif;outline:none}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--gold)}
+form textarea{min-height:110px;resize:vertical}
+/* footer */
+footer{border-top:1px solid var(--border);padding:60px 0 34px;background:#0a0a0c}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:44px}
+footer .logo{height:40px;margin-bottom:20px}
+footer h5{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}
+footer li{list-style:none;margin-bottom:9px}
+footer a{font-size:13px;color:var(--muted);transition:.25s}
+footer a:hover{color:var(--gold)}
+footer p{font-size:12px;color:var(--muted);font-weight:300}
+.f-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:#6b6963;letter-spacing:1px}
+/* meet rezide team */
+.agent{display:grid;grid-template-columns:minmax(240px,330px) 1fr;gap:54px;align-items:start;margin-top:80px;padding-top:80px;border-top:1px solid var(--border)}
+.agent.first{margin-top:46px;padding-top:0;border-top:none}
+.agent .photo{position:relative}
+.agent .photo img{width:100%;background:#fff;border:1px solid var(--border)}
+.agent .photo:after{content:'';position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--gold);z-index:-1}
+.agent h3{font-size:clamp(22px,2.6vw,30px);font-weight:300;letter-spacing:4px;text-transform:uppercase}
+.agent .role{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.agent p.bio{color:#cfccc4;margin-top:18px;font-weight:300;font-size:15.5px}
+.astats{display:flex;flex-wrap:wrap;gap:2px;background:var(--border);border:1px solid var(--border);margin-top:24px}
+.astat{flex:1 1 120px;background:var(--ink);padding:16px 12px;text-align:center}
+.astat b{display:block;font-size:19px;font-weight:400;color:var(--gold-l)}
+.astat span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.acontact{margin-top:18px;font-size:13px;color:var(--muted);letter-spacing:1px}
+.acontact a{color:var(--gold)}
+.acontact a:hover{color:var(--gold-l)}
+.asub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:34px 0 14px;font-weight:600}
+.asold{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.asold .listing .ph{height:150px}
+.asold .listing .info{padding:14px 16px}
+.asold .listing .price{font-size:17px}
+.asold .listing .addr{font-size:12.5px;margin-top:3px}
+.asold .listing .meta{font-size:10px;margin-top:5px}
+.aquotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.aquote{background:var(--panel);border:1px solid var(--border);border-top:2px solid var(--gold);padding:20px}
+.aquote p{font-size:13px;color:#cfccc4;font-weight:300;margin-bottom:12px;font-style:italic}
+.aquote b{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600}
+@media(max-width:880px){
+nav ul{position:fixed;inset:0;background:rgba(11,11,13,.98);flex-direction:column;justify-content:center;gap:26px;display:none}
+nav ul.open{display:flex}
+.burger{display:block;z-index:60}
+.about{grid-template-columns:1fr}
+.agent{grid-template-columns:1fr;gap:34px}
+.contact{grid-template-columns:1fr}
+.f-grid{grid-template-columns:1fr}
+section{padding:70px 0}
+}
+.tconnect{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px}
+.tcon{background:var(--panel);border:1px solid var(--border);border-top:2px solid var(--gold);padding:22px;display:flex;flex-direction:column}
+.tcon h4{font-size:16px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
+.tcon .r{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:5px 0 14px}
+.tcon .row{font-size:13px;color:var(--muted);margin:6px 0;word-break:break-word}
+.tcon .row a{color:#cfccc4}
+.tcon .row a:hover{color:var(--gold)}
+.tcon .book{align-self:flex-start;margin-top:16px;padding:9px 18px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);color:var(--gold);transition:.25s}
+.tcon .book:hover{background:var(--gold);color:#111}
+</style>
+</head>
+<body>
+<div id="bgflow"></div>
+
+<nav id="nav">
+<a href="#home"><img class="logo" src="data:image/png;base64,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" alt="REZIDE Group"></a>
+<button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#team">Meet Rezide</a></li>
+<li><a href="#listings">Featured</a></li>
+<li><a href="#sold">Sold</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#updates">Market Updates</a></li>
+<li><a href="#schedule">Schedule</a></li>
+<li><a class="cta" href="#contact">Let's Connect</a></li>
+</ul>
+</nav>
+
+<header class="hero" id="home">
+<div class="slashes"></div><div class="slashes l"></div>
+<img class="hero-logo" src="data:image/png;base64,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" alt="REZIDE Group">
+<h1>Rezide <span>Where You Desire</span></h1>
+<div class="sub">Chicagoland Real Estate &nbsp;·&nbsp; RE/MAX Legends</div>
+<div class="btns">
+<a class="btn solid" href="#contact">Sell Your Home</a>
+<a class="btn" href="#listings">Find Your New Home</a>
+</div>
+<div class="scroll">Scroll ↓</div>
+</header>
+
+<div class="band"><div class="inner">
+<span>Home is where your story begins.</span><span>//</span><span>Negotiating for you like family.</span><span>//</span><span>Chicago &amp; the Southwest Suburbs</span><span>//</span>
+<span>Home is where your story begins.</span><span>//</span><span>Negotiating for you like family.</span><span>//</span><span>Chicago &amp; the Southwest Suburbs</span><span>//</span>
+</div></div>
+
+<section style="padding:70px 0 0">
+<div class="wrap center rev">
+<div class="pillars">
+<div class="pillar"><b style="font-size:30px;font-weight:300">5.0 ★</b><span>Google Rating</span></div>
+<div class="pillar"><b style="font-size:30px;font-weight:300">200+</b><span>Five-Star Google Reviews</span></div>
+<div class="pillar"><b style="font-size:30px;font-weight:300">EN · AR · AL</b><span>English · Arabic · Albanian</span></div>
+<div class="pillar"><b style="font-size:30px;font-weight:300">7 Days</b><span>Available &amp; Responsive</span></div>
+</div>
+</div>
+</section>
+<section style="padding-top:0">
+<div class="wrap rev">
+<div class="pillars">
+<div class="pillar"><b>Family-First Negotiation</b><span>Every deal handled like it's our own</span></div>
+<div class="pillar"><b>Cook County &amp; Beyond</b><span>From Cook County to the neighboring counties — here to help with all your needs</span></div>
+<div class="pillar"><b>RE/MAX Global Network</b><span>Worldwide reach behind every listing</span></div>
+<div class="pillar"><b>Straight Answers, Fast</b><span>Open book. Seven days a week.</span></div>
+</div>
+</div>
+</section>
+
+<section id="listings" style="padding-top:20px">
+<div class="wrap center rev">
+<div class="kicker">Featured Properties</div>
+<h2 class="h-lg">Current Listings</h2>
+<div class="gold-rule"></div>
+<div class="grid3">
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/112/3646595694-873301622/16036-pine-dr-tinley-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$269,900</div><div class="addr">16036 Pine Dr Unit 476, Tinley Park, IL</div><div class="meta">2 Beds · 2.5 Baths · 1,900 Sq.Ft. · Listed by Basil Kawash</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/115/4247365794-538228622/126-indiana-st-park-forest-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$217,500</div><div class="addr">126 Indiana St, Park Forest, IL</div><div class="meta">3 Beds · 3 Baths · 1,442 Sq.Ft. · Listed by Fady Ishak</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/115/6462797094-814299122/265-n-wilmette-ave-westmont-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$434,900</div><div class="addr">265 N Wilmette Ave, Westmont, IL</div><div class="meta">2 Beds · 2.5 Baths · 1,800 Sq.Ft. · Listed by Omar Hamdan</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/115/2413133284-306183712/9901-s-76th-ave-oak-lawn-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$4,000,000</div><div class="addr">9901 S 76th Ave, Oak Lawn, IL</div><div class="meta">Industrial Land · 4.2 Acres · Listed by Nazire Tahiri</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/115/4205398324-520676491/4847-175th-st-country-club-hills-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$650,000</div><div class="addr">4847 175th St, Country Club Hills, IL</div><div class="meta">Commercial Land · 2 Acres · Listed by Nazire Tahiri</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://images.homes.com/listings/112/6760193574-371519412/13513-s-baltimore-ave-chicago-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$199,900</div><div class="addr">13513 S Baltimore Ave, Chicago, IL</div><div class="meta">10 Beds · 4 Baths · Investment · Listed by Basil Kawash</div></div></div>
+<div class="listing"><div class="ph"><span class="tag">For Sale</span><img src="https://ssl.cdn-redfin.com/photo/68/bigphoto/873/12702873_0.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$189,900</div><div class="addr">13223 S Buffalo Ave, Chicago, IL</div><div class="meta">3 Beds · 2 Baths · 1,100 Sq.Ft. · Listed by Basil Kawash</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Under Contract</span><img src="https://images.homes.com/listings/115/3851846784-927502022/843-n-waller-ave-chicago-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$380,000</div><div class="addr">843 N Waller Ave, Chicago, IL</div><div class="meta">7 Beds · 5 Baths · 3-Unit Investment · Listed by Fady Ishak</div></div></div>
+</div>
+</div>
+</section>
+
+<section id="sold" style="padding-top:20px">
+<div class="wrap center rev">
+<div class="kicker">Track Record</div>
+<h2 class="h-lg">Recently Sold</h2>
+<div class="gold-rule"></div>
+<div class="grid3">
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/9700369834-102697991/8818-w-85th-st-justice-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$675,000</div><div class="addr">8818 W 85th St, Justice</div><div class="meta">Omar Hamdan · Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/9619394163-890470961/20263-brendan-st-frankfort-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$635,000</div><div class="addr">20263 Brendan St, Frankfort</div><div class="meta">Basil Kawash · Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/0952090464-638087212/8332-s-77th-ct-oak-lawn-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$625,000</div><div class="addr">8332 S 77th Ct, Oak Lawn</div><div class="meta">Omar Hamdan · Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/112/0618308244-476085102/10900-beth-dr-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$576,800</div><div class="addr">10900 Beth Dr, Orland Park</div><div class="meta">Basil (Seller) &amp; Fady (Buyer) · In-House Deal</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/2194339083-717912571/20225-s-mary-therese-ln-frankfort-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$550,000</div><div class="addr">20225 S Mary Therese Ln, Frankfort</div><div class="meta">Fady Ishak · Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/3782074874-172861612/12626-s-london-ln-palos-heights-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$309,000</div><div class="addr">12626 S London Ln, Palos Heights</div><div class="meta">Nazire Tahiri · Represented the Seller</div></div></div>
+</div>
+</div>
+</section>
+<section id="team" style="padding-top:40px">
+<div class="wrap rev">
+<div class="center">
+<div class="kicker">The Team</div>
+<h2 class="h-lg">Meet Rezide</h2>
+<div class="gold-rule"></div>
+<p style="max-width:680px;margin:0 auto;color:var(--muted);font-weight:300">The REZIDE Group at RE/MAX Legends — four agents, one standard: negotiate for every client like family. Scroll down to meet each member of the team, see what they've sold, and hear from their clients.</p>
+</div>
+
+<!-- BASIL -->
+<div class="agent first" id="team-basil">
+<div class="photo"><img src="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/seglxua7lvn1ohhj0dkd" referrerpolicy="no-referrer" alt="Basil Kawash"></div>
+<div>
+<h3>Basil Kawash</h3>
+<div class="role">Team Lead · Broker/Associate · RE/MAX Legends</div>
+<p class="bio">Founder of the REZIDE Group, Basil is known for being honest, direct, and relentless on behalf of his clients across Chicago and the southwest suburbs. When he negotiates for you, it's as if he's negotiating for his own family — from the first showing to the closing table.</p>
+<div class="astats">
+<div class="astat"><b>5.0 ★</b><span>Google Rating</span></div>
+<div class="astat"><b>49</b><span>Google Reviews</span></div>
+<div class="astat"><b>71</b><span>Homes Sold</span></div>
+<div class="astat"><b>$25.6M</b><span>Career Volume</span></div>
+<div class="astat"><b>EN · AR</b><span>English · Arabic</span></div>
+</div>
+<div class="acontact">📞 <a href="tel:7085391979">(708) 539-1979</a> &nbsp;·&nbsp; Instagram: <a href="https://www.instagram.com/homeswithbas" target="_blank">@homeswithbas</a> &nbsp;·&nbsp; IL License #475195210</div>
+<div class="asub">Previously Sold</div>
+<div class="asold">
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/9619394163-890470961/20263-brendan-st-frankfort-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$635,000</div><div class="addr">20263 Brendan St, Frankfort</div><div class="meta">Represented the Seller · 2% Above List</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/112/0618308244-476085102/10900-beth-dr-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$576,800</div><div class="addr">10900 Beth Dr, Orland Park</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/112/7135377344-088198102/15913-rankin-dr-lockport-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$365,000</div><div class="addr">15913 Rankin Dr, Lockport</div><div class="meta">Represented the Seller · 7% Above List</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/117/4045821124-642681491/4312-w-potomac-ave-chicago-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$320,000</div><div class="addr">4312 W Potomac Ave, Chicago</div><div class="meta">Represented the Seller · 10% Above List</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/8699607044-048153002/15141-quail-hollow-dr-orland-park-il-unit-106-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$190,000</div><div class="addr">15141 Quail Hollow Dr, Orland Park</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/1456169483-899463771/10431-s-tod-dr-palos-hills-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$385,000</div><div class="addr">10431 S Tod Dr, Palos Hills</div><div class="meta">Represented the Seller</div></div></div>
+</div>
+<div class="asub">Client Testimonials</div>
+<div class="aquotes">
+<div class="aquote"><p>"From start to finish, Basil was professional, knowledgeable, and genuinely cared about finding the perfect place. He was always available."</p><b>— Salah Muthana · Google ★★★★★</b></div>
+<div class="aquote"><p>"He has a great work ethic and truly cares about getting you the house you want."</p><b>— Anna Namos · Google ★★★★★</b></div>
+<div class="aquote"><p>"Transparent and tells you things as is — he will only sell you a home that he himself would buy."</p><b>— Odai Aldawoud · Google ★★★★★</b></div>
+</div>
+</div>
+</div>
+
+<!-- FADY -->
+<div class="agent" id="team-fady">
+<div class="photo"><img src="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/xuh1musugcswt31ejaaz" referrerpolicy="no-referrer" alt="Fady Ishak"></div>
+<div>
+<h3>Fady Ishak</h3>
+<div class="role">Broker/Associate · RE/MAX Legends</div>
+<p class="bio">Fady is a results-driven Realtor serving buyers, sellers, and investors across Chicagoland — from first-time buyers to seasoned investors. Known for his market knowledge, attention to detail, and genuine care for clients, he's closed 30 homes worth $7.4M+ across Orland Park, Tinley Park, Frankfort, Bridgeview, and beyond. A RE/MAX Executive Club and "Realtor On The Rise" award recipient.</p>
+<div class="astats">
+<div class="astat"><b>5.0 ★</b><span>Google Rating</span></div>
+<div class="astat"><b>107</b><span>Google Reviews</span></div>
+<div class="astat"><b>30</b><span>Homes Sold</span></div>
+<div class="astat"><b>$7.4M</b><span>Career Volume</span></div>
+<div class="astat"><b>EN · AR</b><span>English · Arabic</span></div>
+</div>
+<div class="acontact">📞 <a href="tel:7082449138">(708) 244-9138</a> &nbsp;·&nbsp; Instagram: <a href="https://www.instagram.com/soldbyfady" target="_blank">@soldbyfady</a> &nbsp;·&nbsp; IL License #475202539</div>
+<div class="asub">Previously Sold</div>
+<div class="asold">
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/9805624784-160801022/9008-w-140th-st-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$190,000</div><div class="addr">9008 W 140th St 3C, Orland Park</div><div class="meta">Represented the Seller · Sold in 3 Days</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/2071462734-276172991/7008-plymouth-ct-tinley-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$337,500</div><div class="addr">7008 Plymouth Ct, Tinley Park</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/8196366684-697380912/104-iliad-dr-tinley-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$380,000</div><div class="addr">104 Iliad Dr, Tinley Park</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/2194339083-717912571/20225-s-mary-therese-ln-frankfort-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$550,000</div><div class="addr">20225 S Mary Therese Ln, Frankfort</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/1522246724-340241691/15215-lawrence-ct-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$392,247</div><div class="addr">15215 Lawrence Ct, Orland Park</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/0618308244-476085102/10900-beth-dr-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$576,800</div><div class="addr">10900 Beth Dr, Orland Park</div><div class="meta">Represented the Buyer · In-House Deal</div></div></div>
+</div>
+<div class="asub">Client Testimonials</div>
+<div class="aquotes">
+<div class="aquote"><p>"He stuck with me through countless showings, the ups and the downs... We ended up landing a property to my exact desires. Very detailed and precise throughout."</p><b>— LittleMoeFades · Google ★★★★★</b></div>
+<div class="aquote"><p>"An absolute blessing. From start to finish, he went above and beyond to make the entire process smooth, stress-free, and even enjoyable."</p><b>— Germin Kodsy · Google ★★★★★</b></div>
+<div class="aquote"><p>"Very patient with my decision and took his time finding the property that was best for me. The best and most professional in the game!"</p><b>— Ala Elhami · Google ★★★★★</b></div>
+</div>
+</div>
+</div>
+
+<!-- NAZIRE -->
+<div class="agent" id="team-nazire">
+<div class="photo"><img src="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/pvxa6haynupxfa5wqkq2" referrerpolicy="no-referrer" alt="Nazire Tahiri"></div>
+<div>
+<h3>Nazire Tahiri</h3>
+<div class="role">Broker/Associate · Residential &amp; Commercial · RE/MAX Legends</div>
+<p class="bio">A dedicated residential and commercial Realtor serving the Chicagoland area, Nazire brings a problem-solving mindset and sharp negotiation to every deal. Fluent in English and Albanian, she's closed 35 transactions — 12 in the last year alone — with sales ranging from $133K to $535K across Burbank, Palos Heights, Oak Lawn, Chicago Ridge, and beyond.</p>
+<div class="astats">
+<div class="astat"><b>5.0 ★</b><span>Google Rating</span></div>
+<div class="astat"><b>9</b><span>Google Reviews</span></div>
+<div class="astat"><b>35</b><span>Homes Sold</span></div>
+<div class="astat"><b>$9.8M</b><span>Career Volume</span></div>
+<div class="astat"><b>EN · AL</b><span>English · Albanian</span></div>
+</div>
+<div class="acontact">📞 <a href="tel:7083598760">(708) 359-8760</a> &nbsp;·&nbsp; Instagram: <a href="https://www.instagram.com/Nazy_Tahiri" target="_blank">@Nazy_Tahiri</a> &nbsp;·&nbsp; IL License #475203950</div>
+<div class="asub">Previously Sold</div>
+<div class="asold">
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/6723804284-046704712/5850-w-87th-st-burbank-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$133,000</div><div class="addr">5850 W 87th St 1A, Burbank</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/3782074874-172861612/12626-s-london-ln-palos-heights-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$309,000</div><div class="addr">12626 S London Ln #2, Palos Heights</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/5369883044-208462002/7732-w-sunset-dr-elmwood-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$410,000</div><div class="addr">7732 W Sunset Dr, Elmwood Park</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/2391941364-986047212/8400-new-england-ave-burbank-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$380,000</div><div class="addr">8400 S New England Ave, Burbank</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/2291881474-523253412/10636-ridgeland-ave-chicago-ridge-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$173,000</div><div class="addr">10636 S Ridgeland Ave 2D, Chicago Ridge</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/1325996274-008506312/21408-abbey-ln-crest-hill-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$295,000</div><div class="addr">21408 Abbey Ln, Crest Hill</div><div class="meta">Represented the Buyer</div></div></div>
+</div>
+<div class="asub">Client Testimonials</div>
+<div class="aquotes">
+<div class="aquote"><p>"Buying a house can be very stressful but Nazire was always available for us and responded very quick to anything we needed — buying the house and also selling."</p><b>— Marta Traczyk · Google ★★★★★</b></div>
+<div class="aquote"><p>"Hands down one of the best. Her professionalism, dedication, and open communication truly set her apart."</p><b>— Elizabeth McGuire · Google ★★★★★</b></div>
+<div class="aquote"><p>"She's a powerhouse in real estate. Sharp, professional, and an exceptional negotiator."</p><b>— Ann A · Google ★★★★★</b></div>
+</div>
+</div>
+</div>
+
+<!-- OMAR -->
+<div class="agent" id="team-omar">
+<div class="photo"><img src="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/3c9d043d-89c6-4400-b87c-79811e131399" referrerpolicy="no-referrer" alt="Omar Hamdan"></div>
+<div>
+<h3>Omar Hamdan</h3>
+<div class="role">Broker/Associate · RE/MAX Legends</div>
+<p class="bio">Omar is dedicated to making every purchase or sale clear, smooth, and successful — honest, responsive, and fully committed to his clients' goals. Fluent in English and Arabic, he's closed 34 sales worth $11.3M, ranging from $197K starter condos to a $695K top sale, with deep experience in Orland Park, Oak Lawn, Palos Hills, Justice, and Darien.</p>
+<div class="astats">
+<div class="astat"><b>5.0 ★</b><span>Google Rating</span></div>
+<div class="astat"><b>51</b><span>Google Reviews</span></div>
+<div class="astat"><b>34</b><span>Homes Sold</span></div>
+<div class="astat"><b>$11.3M</b><span>Career Volume</span></div>
+<div class="astat"><b>EN · AR</b><span>English · Arabic</span></div>
+</div>
+<div class="acontact">📞 <a href="tel:7089217066">(708) 921-7066</a> &nbsp;·&nbsp; Instagram: <a href="https://www.instagram.com/realtybyomar" target="_blank">@realtybyomar</a> &nbsp;·&nbsp; IL License #475210410</div>
+<div class="asub">Previously Sold</div>
+<div class="asold">
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/115/1817047274-284416312/3050-n-nagle-ave-chicago-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$385,000</div><div class="addr">3050 N Nagle Ave, Chicago</div><div class="meta">Represented the Seller</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/9700369834-102697991/8818-w-85th-st-justice-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$675,000</div><div class="addr">8818 W 85th St, Justice</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/0952090464-638087212/8332-s-77th-ct-oak-lawn-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$625,000</div><div class="addr">8332 S 77th Ct, Oak Lawn</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/7858670554-368553602/7501-cambridge-rd-darien-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$465,000</div><div class="addr">7501 Cambridge Rd, Darien</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/9826401334-330780891/7833-w-100th-place-palos-hills-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$425,000</div><div class="addr">7833 W 100th Pl, Palos Hills</div><div class="meta">Represented the Buyer</div></div></div>
+<div class="listing"><div class="ph"><span class="tag dark">Sold</span><img src="https://images.homes.com/listings/102/7031362073-584185171/9161-sunrise-ln-orland-park-il-primaryphoto.jpg" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('empty');this.remove()" alt=""></div>
+<div class="info"><div class="price">$395,000</div><div class="addr">9161 Sunrise Ln, Orland Park</div><div class="meta">Represented the Buyer</div></div></div>
+</div>
+<div class="asub">Client Testimonials</div>
+<div class="aquotes">
+<div class="aquote"><p>"He exceeded all my expectations. Professional, knowledgeable, and dedicated to helping me find the perfect property. Omar communicated clearly and kept me informed."</p><b>— Atta Motan · Google ★★★★★</b></div>
+<div class="aquote"><p>"If you're looking for a realtor who truly goes above and beyond, look no further than Omar. I cannot recommend him enough."</p><b>— Ahmad Abdel · Google ★★★★★</b></div>
+<div class="aquote"><p>"Always helpful, answered my questions — even after 9 PM — and made me feel like a priority. His negotiation skills were top-notch."</p><b>— Mahmoud Mohammad · Google ★★★★★</b></div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="testimonials" class="t-wrap">
+<div class="wrap center rev">
+<div class="kicker">Testimonials</div>
+<h2 class="h-lg" style="color:#1c1c1e">What Clients Say About the REZIDE Group</h2>
+<div class="gold-rule"></div>
+<div class="tcards">
+<div class="tcard"><div class="q">“</div><p>We had an amazing experience working with Basil while helping my dad purchase his home. From start to finish he was professional, knowledgeable, and genuinely cared about finding the perfect place. He was always available.</p><b>— Salah Muthana · Client of Basil Kawash · Google ★★★★★</b></div>
+<div class="tcard"><div class="q">“</div><p>An absolute blessing. From start to finish, Fady went above and beyond to make the entire process smooth, stress-free, and even enjoyable. His knowledge of the market and attention to detail were exceptional.</p><b>— Germin Kodsy · Client of Fady Ishak · Google ★★★★★</b></div>
+<div class="tcard"><div class="q">“</div><p>If you're looking for an exceptional agent in Chicagoland, Nazire is hands down one of the best. Her professionalism, dedication, and open communication truly set her apart.</p><b>— Elizabeth McGuire · Client of Nazire Tahiri · Google ★★★★★</b></div>
+<div class="tcard"><div class="q">“</div><p>Omar exceeded all my expectations. Professional, knowledgeable, and dedicated to helping me find the perfect property. He communicated clearly and kept me informed every step of the way.</p><b>— Atta Motan · Client of Omar Hamdan · Google ★★★★★</b></div>
+<div class="tcard"><div class="q">“</div><p>Working with Basil on our first home was incredibly smooth and seamless. He was exceptionally accommodating with scheduling, understanding that as busy professionals flexibility mattered.</p><b>— Gen &amp; Maen · Client of Basil Kawash · Google ★★★★★</b></div>
+<div class="tcard"><div class="q">“</div><p>He stuck with me through countless showings, the ups and the downs, and we landed a property to my exact desires. Very detailed and precise throughout the entire process.</p><b>— LittleMoeFades · Client of Fady Ishak · Google ★★★★★</b></div>
+</div>
+<p style="margin-top:26px;font-size:13px;color:#77746c;letter-spacing:1px">★★★★★ &nbsp;Five-star rated across the REZIDE Group on Google</p>
+</div>
+</section>
+
+<section id="updates">
+<div class="wrap center rev">
+<div class="kicker">REZIDE In The Know</div>
+<h2 class="h-lg">Weekly Market Updates</h2>
+<div class="gold-rule"></div>
+<div class="news" style="text-align:left">
+<div class="ncard"><div class="date">Every Friday</div><h4>City of Chicago Market Update</h4><p>Median prices, days on market, and inventory — broken down fresh every week so you know exactly where the city stands.</p><a href="https://www.facebook.com/BasilKawashRealtor" target="_blank">Follow on Facebook →</a></div>
+<div class="ncard"><div class="date">Every Friday</div><h4>Southwest Suburbs Market Update</h4><p>Palos Hills, Orland Park, Tinley Park and beyond — the suburban numbers that matter for buyers and sellers.</p><a href="https://www.instagram.com/homeswithbas" target="_blank">Follow on Instagram →</a></div>
+</div>
+</div>
+</section>
+
+<div class="cta-band rev">
+<h2>"We offer the highest level of expertise, service, and integrity — and we negotiate for you like family."</h2>
+<a class="btn solid" href="#contact">Let's Work Together</a>
+</div>
+
+<section id="schedule">
+<div class="wrap center rev">
+<div class="kicker">Book a Meeting</div>
+<h2 class="h-lg">Schedule a Meeting</h2>
+<div class="gold-rule"></div>
+<p style="max-width:640px;margin:0 auto 26px;color:var(--muted);font-weight:300">Book an instant time with Basil below — or reach any member of the REZIDE Group in the next section.</p>
+<div class="calendly-inline-widget" data-url="https://calendly.com/homeswithbas?hide_gdpr_banner=1&background_color=141418&text_color=f2f0ea&primary_color=c5a253" style="min-width:320px;height:700px;border:1px solid var(--border);border-top:2px solid var(--gold)"></div>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<p style="margin-top:18px"><a class="btn solid" href="https://calendly.com/homeswithbas" target="_blank">Open Scheduling Page</a></p>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap rev">
+<div class="center">
+<div class="kicker">Contact</div>
+<h2 class="h-lg">Let's Connect</h2>
+<div class="gold-rule"></div>
+<p style="max-width:680px;margin:0 auto;color:var(--muted);font-weight:300">Tell us about your move and pick who you'd like to work with — your message goes straight to that agent. Prefer to reach out yourself? Every REZIDE agent's direct info and booking is below.</p>
+</div>
+<div class="contact" style="margin-top:46px">
+<div>
+<form id="cform" name="contact-team" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return sendMsg(event)">
+<input type="hidden" name="form-name" id="fFormName" value="contact-team">
+<p style="position:absolute;left:-9999px;opacity:0;"><label>Leave this field blank: <input name="bot-field"></label></p>
+<label>Full Name</label><input id="fName" name="name" required placeholder="Your name">
+<label>Email</label><input id="fEmail" name="email" type="email" required placeholder="you@email.com">
+<label>Phone</label><input id="fPhone" name="phone" placeholder="(xxx) xxx-xxxx" oninput="formatPhoneInput(this)" maxlength="14">
+<label>Who would you like to reach?</label>
+<select id="fAgent" name="agent"><option value="team">No preference — the REZIDE team</option><option value="basil">Basil Kawash</option><option value="fady">Fady Ishak</option><option value="nazire">Nazire Tahiri</option><option value="omar">Omar Hamdan</option></select>
+<label>Interested In</label>
+<select id="fInt" name="interest"><option>Selling &amp; Buying</option><option>Selling</option><option>Buying</option><option>Renting</option><option>Other</option></select>
+<label>Message</label><textarea id="fMsg" name="message" placeholder="Tell us about your situation..."></textarea>
+<button class="btn solid" type="submit" style="margin-top:22px">Send Message</button>
+<p id="formNote" style="margin-top:14px;font-size:12px;color:var(--muted)"></p>
+</form>
+
+<!-- Hidden duplicate forms: exist only so Netlify's build-time HTML parser
+     detects and registers one form per agent. The visible form above submits
+     to whichever of these matches the selected agent, via the form-name field. -->
+<div style="display:none" aria-hidden="true">
+<form name="contact-basil" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-basil">
+<input name="bot-field"><input name="name"><input name="email"><input name="phone"><input name="agent"><input name="interest"><textarea name="message"></textarea>
+</form>
+<form name="contact-fady" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-fady">
+<input name="bot-field"><input name="name"><input name="email"><input name="phone"><input name="agent"><input name="interest"><textarea name="message"></textarea>
+</form>
+<form name="contact-nazire" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-nazire">
+<input name="bot-field"><input name="name"><input name="email"><input name="phone"><input name="agent"><input name="interest"><textarea name="message"></textarea>
+</form>
+<form name="contact-omar" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-omar">
+<input name="bot-field"><input name="name"><input name="email"><input name="phone"><input name="agent"><input name="interest"><textarea name="message"></textarea>
+</form>
+</div>
+</div>
+<div>
+<div class="tconnect">
+<div class="tcon"><h4>Basil Kawash</h4><div class="r">Team Lead · Broker/Associate</div><div class="row">📞 <a href="tel:7085391979">(708) 539-1979</a></div><div class="row">✉️ <a href="mailto:homeswithbas@gmail.com">homeswithbas@gmail.com</a></div><div class="row">Instagram: <a href="https://www.instagram.com/homeswithbas" target="_blank">@homeswithbas</a></div><a class="book" href="https://calendly.com/homeswithbas" target="_blank">Book on Calendly</a></div>
+<div class="tcon"><h4>Fady Ishak</h4><div class="r">Broker/Associate</div><div class="row">📞 <a href="tel:7082449138">(708) 244-9138</a></div><div class="row">✉️ <a href="mailto:brokerfadyishak@gmail.com">brokerfadyishak@gmail.com</a></div><div class="row">Instagram: <a href="https://www.instagram.com/soldbyfady" target="_blank">@soldbyfady</a></div><a class="book" href="tel:7082449138">Call or Text to Book</a></div>
+<div class="tcon"><h4>Nazire Tahiri</h4><div class="r">Broker/Associate</div><div class="row">📞 <a href="tel:7083598760">(708) 359-8760</a></div><div class="row">✉️ <a href="mailto:naziretahiri@gmail.com">naziretahiri@gmail.com</a></div><div class="row">Instagram: <a href="https://www.instagram.com/Nazy_Tahiri" target="_blank">@Nazy_Tahiri</a></div><a class="book" href="tel:7083598760">Call or Text to Book</a></div>
+<div class="tcon"><h4>Omar Hamdan</h4><div class="r">Broker/Associate</div><div class="row">📞 <a href="tel:7089217066">(708) 921-7066</a></div><div class="row">✉️ <a href="mailto:realtybyomar@gmail.com">realtybyomar@gmail.com</a></div><div class="row">Instagram: <a href="https://www.instagram.com/realtybyomar" target="_blank">@realtybyomar</a></div><a class="book" href="tel:7089217066">Call or Text to Book</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="f-grid">
+<div>
+<img class="logo" src="data:image/png;base64,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" alt="REZIDE Group">
+<p>The REZIDE Group at RE/MAX Legends. Serving Chicago and the southwest suburbs with expertise, service, and integrity.</p>
+</div>
+<div>
+<h5>Navigate</h5>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#team">Meet Rezide</a></li>
+<li><a href="#listings">Featured Properties</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#schedule">Schedule a Meeting</a></li>
+<li><a href="#contact">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul>
+<li><a href="tel:7085391979">(708) 539-1979</a></li>
+<li><a href="mailto:homeswithbas@gmail.com">homeswithbas@gmail.com</a></li>
+<li><a href="https://www.instagram.com/rezidegroup_" target="_blank">@rezidegroup_ on Instagram</a></li>
+</ul>
+</div>
+</div>
+<div class="f-bottom">
+<div>© 2026 REZIDE Group · RE/MAX Legends · Basil Kawash, Broker/Associate · IL License #475195210. All information deemed reliable but not guaranteed and should be independently reviewed and verified.</div>
+<div>Equal Housing Opportunity ⌂</div>
+</div>
+</div>
+</footer>
+
+<script>
+function formatPhoneInput(el){
+  let digits = el.value.replace(/\D/g,'').slice(0,10);
+  let formatted = digits;
+  if(digits.length > 6){
+    formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+  } else if(digits.length > 3){
+    formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+  } else if(digits.length > 0){
+    formatted = '(' + digits;
+  }
+  el.value = formatted;
+}
+
+// nav solid on scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 60));
+// close mobile menu on click
+document.querySelectorAll('#menu a').forEach(a => a.onclick = () => document.getElementById('menu').classList.remove('open'));
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.rev').forEach(el => io.observe(el));
+
+// flowing background — shifts tone as you scroll between sections
+const bgMap = {
+home: 'radial-gradient(ellipse 90% 65% at 50% 108%, rgba(197,162,83,.16), transparent 60%), linear-gradient(180deg,#0b0b0d 0%,#101014 55%,#0b0b0d 100%)',
+about: 'radial-gradient(ellipse 70% 60% at 15% 40%, rgba(197,162,83,.10), transparent 60%), linear-gradient(160deg,#12100b 0%,#0c0c0f 70%)',
+listings: 'radial-gradient(ellipse 70% 55% at 85% 20%, rgba(197,162,83,.08), transparent 55%), linear-gradient(200deg,#0d0d12 0%,#0b0b0d 80%)',
+sold: 'radial-gradient(ellipse 80% 60% at 50% 90%, rgba(197,162,83,.12), transparent 60%), linear-gradient(180deg,#0b0b0d 0%,#14110a 100%)',
+team: 'radial-gradient(ellipse 75% 60% at 30% 30%, rgba(197,162,83,.10), transparent 60%), linear-gradient(170deg,#100f0b 0%,#0b0b0e 80%)',
+updates: 'radial-gradient(ellipse 65% 55% at 20% 80%, rgba(197,162,83,.09), transparent 55%), linear-gradient(150deg,#0e0d13 0%,#0b0b0d 75%)',
+schedule: 'radial-gradient(ellipse 75% 60% at 80% 60%, rgba(197,162,83,.11), transparent 60%), linear-gradient(180deg,#100e0a 0%,#0c0c10 100%)',
+contact: 'radial-gradient(ellipse 90% 70% at 50% 0%, rgba(197,162,83,.13), transparent 60%), linear-gradient(180deg,#12100b 0%,#0a0a0c 90%)'
+};
+const bgEl = document.getElementById('bgflow');
+const bgIO = new IntersectionObserver(es => {
+es.forEach(e => { if (e.isIntersecting && bgMap[e.target.id]) bgEl.style.background = bgMap[e.target.id]; });
+}, { threshold: 0.35 });
+Object.keys(bgMap).forEach(id => { const el = document.getElementById(id); if (el) bgIO.observe(el); });
+
+// contact form -> routes to the correct agent-specific Netlify form
+function sendMsg(ev){
+ev.preventDefault();
+const form = document.getElementById('cform');
+const names = {team:'the REZIDE team',basil:'Basil Kawash',fady:'Fady Ishak',nazire:'Nazire Tahiri',omar:'Omar Hamdan'};
+const agent = document.getElementById('fAgent').value;
+const targetForm = 'contact-' + agent;
+document.getElementById('fFormName').value = targetForm;
+const data = new FormData(form);
+fetch('/', {
+method: 'POST',
+headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+body: new URLSearchParams(data).toString()
+})
+.then(() => {
+document.getElementById('formNote').textContent = 'Thanks for reaching out — your message for ' + names[agent] + ' has been sent!';
+form.reset();
+document.getElementById('fFormName').value = 'contact-team';
+})
+.catch(() => {
+document.getElementById('formNote').textContent = 'Something went wrong — please email homeswithbas@gmail.com directly.';
+});
+return false;
+}
+</script>
+</body>
+</html>
